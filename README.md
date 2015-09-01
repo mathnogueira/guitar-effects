@@ -14,6 +14,6 @@ Dependecies:
 ```
   -----> Gravação ---------> Processamento ------> Reprodução -------> Arquivo TMP
     Î               |    (pipeline de efeitos)
-    |               |
+    |      LOOP     |
     |_______________|
 ```
