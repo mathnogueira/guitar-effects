@@ -11,6 +11,9 @@ Dependecies:
 * Gravação continua do audio
 * Pipeline para gravação -> processamento -> reprodução -> gravar arquivo tmp
 
-'''
-  Teste
-'''
+```
+  -----> Gravação ---------> Processamento ------> Reprodução -------> Arquivo TMP
+    Î               |    (pipeline de efeitos)
+    |               |
+    |_______________|
+```
