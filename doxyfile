@@ -1,0 +1,7 @@
+PROJECT_NAME 			= "AudioFX - Audio effects"
+GENERATE_TREEVIEW 		= yes
+EXTRACT_PRIVATE 		= yes
+INPUT					= ./include/
+HTML_OUTPUT 			= docs/html
+LATEX_OUTPUT			= docs/latex
+RECURSIVE				= yes
