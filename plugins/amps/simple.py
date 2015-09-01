@@ -9,13 +9,14 @@ def options():
     # Mid  [0-10]
     # High [0-10]
     return [
-        ('low', 0, 10),
-        ('mid', 0, 10),
-        ('high', 0, 10),
+        {'name' : 'low', 'min' : 0, 'max' : 10, 'type' : 'int_scale'},
+        {'name' : 'mid', 'min' : 0, 'max' : 10, 'type' : 'int_scale'},
+        {'name' : 'high', 'min' : 0, 'max' : 10, 'type' : 'int_scale'},
     ]
 
-def configure():
-    pass
+def configure(options):
+    return options
 
-def execute():
-    pass
+def execute(options):
+    for dictionary in options:
+        print(dictionary)

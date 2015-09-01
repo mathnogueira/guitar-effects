@@ -9,6 +9,8 @@
 // Requires Python 3.4
 #include <python3.4/Python.h>
 #include <plugins/plugin.h>
+#include <plugins/option.h>
+#include <vector>
 
 namespace AudioFX {
 
@@ -43,9 +45,12 @@ public:
     void initialize();
 
     /**
-     * Get options of plugin.
+     * Get options of plugin from the python script.
+     *
+     * It executes the options function in the python script and convert
+     * it to a C++ structure.
      */
-    void getOptions();
+    void importOptions();
 
     /**
      * Define values for each option of the plguin.
@@ -57,6 +62,14 @@ public:
      */
     void execute();
 
+    /**
+     * Get options of the plugin.
+     */
+    std::vector<PluginOption*> getOptions()
+    {
+        return this->options;
+    }
+
 private:
 
     /**
@@ -67,7 +80,12 @@ private:
     /**
      * Plugin options.
      */
-    PyObject *options;
+    std::vector<PluginOption*> options;
+
+    /**
+     * Same as the plugin options, but in a python interface.
+     */
+    PyObject* pyOptions;
 
     /**
      * Function that says the options of the plugin.
