@@ -10,3 +10,7 @@ Dependecies:
 * Pipeline de execução dos efeitos (plugins)
 * Gravação continua do audio
 * Pipeline para gravação -> processamento -> reprodução -> gravar arquivo tmp
+
+'''
+  Teste
+'''
