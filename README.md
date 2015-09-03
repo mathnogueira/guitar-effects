@@ -5,6 +5,8 @@ Dependecies:
 * portaudio
 * fftw
 
+ # Not compatible with Mac OSX
+
 # TODO
 
 * Pipeline de execução dos efeitos (plugins)
