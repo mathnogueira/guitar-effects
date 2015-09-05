@@ -12,6 +12,8 @@
 #include <portaudio.h>
 #include <iostream>
 
+namespace AudioFX {
+
 /**
  * \class OutputStream <audio/outputstream.h>
  * \brief Stream used to play audio tracks.
@@ -113,3 +115,5 @@ private:
      */
     bool playing;
 };
+
+}; // namespace

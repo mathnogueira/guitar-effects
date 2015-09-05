@@ -21,8 +21,9 @@ SRCDIRS := $(shell find . -name '*.$(SRCEXT)' -exec dirname {} \; | uniq)
 OBJS    := $(patsubst %.$(SRCEXT),$(OBJDIR)/%.o,$(SRCS))
  
 DEBUG   = -ggdb -O0
+RELEASE = -O2
 INCLUDE = -Iinclude -I /usr/include
-LIBS 	= -lportaudio
+LIBS 	= -lportaudio -lfftw3f
 CFLAGS  = -Wall -lm -c $(DEBUG) $(INCLUDE)
 OFLAGS  = -lm -msse2 -ffast-math -ftree-vectorize $(LIBS)
 LDFLAGS = -L/usr/lib/python3.4/config-3.4m-x86_64-linux-gnu -L/usr/lib -lpthread -ldl  -lutil -lm  -lpython3.4m -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions

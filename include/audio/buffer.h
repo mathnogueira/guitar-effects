@@ -8,6 +8,8 @@
 
 #include <audio/core.h>
 
+namespace AudioFX {
+
 /**
  * \class Buffer <audio/buffer.h>
  * \brief A simple audio buffer for recording.
@@ -100,3 +102,5 @@ private:
      */
     SAMPLE_TYPE *buffer;
 };
+
+}; // namespace

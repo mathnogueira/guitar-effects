@@ -1,5 +1,7 @@
 #include <audio/buffer.h>
 
+using namespace AudioFX;
+
 Buffer::Buffer()
 {
     unsigned int bufferSize;

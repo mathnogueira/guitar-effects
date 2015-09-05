@@ -52,7 +52,7 @@ namespace AudioFX {
  * but it cannot be too big, otherwise, you will notice some lag
  * between the input and output.
  */
-#define INTERNAL_AUDIO_BUFFER_SIZE   512
+#define INTERNAL_AUDIO_BUFFER_SIZE   32
 
 /**
  * Value used to indicate a silent sample.

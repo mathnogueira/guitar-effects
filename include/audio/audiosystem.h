@@ -12,7 +12,12 @@
 #include <audio/core.h>
 #include <audio/inputstream.h>
 #include <audio/outputstream.h>
+#include <audio/effects/fxsystem.h>
 #include <thread>
+
+namespace AudioFX {
+
+class FxSystem;
 
 /**
  * \class AudioSystem <audio/audiosystem.h>
@@ -49,7 +54,7 @@ public:
     void startRecording();
 
     /**
-     * Stop recording audio from the input device.
+     * Stop recording audio from the innput device.
      */
     void stopRecording();
 
@@ -67,6 +72,11 @@ public:
      * Start recording and playing at the same time.
      */
     void start();
+
+    /**
+     * Function that is used as callback for the Effects System.
+     */
+    void onAudioProcessed(SAMPLE_TYPE* input);
 
 private:
 
@@ -91,6 +101,17 @@ private:
     std::thread *outputThread;
 
     /**
+     * System that will apply effects to the audio captured by the input
+     * stream.
+     */
+    FxSystem *effectSystem;
+
+    /**
+     * Thread to run the effects system.
+     */
+    std::thread *fxThread;
+
+    /**
      * Buffer used to store the data to be played and stored.
      */
     Buffer buffer;
@@ -101,3 +122,5 @@ private:
      */
     void onAudioBufferReceived(SAMPLE_TYPE* buffer);
 };
+
+}; // namespace

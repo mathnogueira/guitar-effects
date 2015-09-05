@@ -10,6 +10,8 @@
 // Requires portaudio to work
 #include <portaudio.h>
 
+namespace AudioFX {
+
 class AudioSystem;
 
 /**
@@ -111,3 +113,5 @@ private:
      */
     bool setup();
 };
+
+}; // namespace
