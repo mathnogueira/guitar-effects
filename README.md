@@ -10,7 +10,7 @@ Dependecies:
 # TODO
 
 * Pipeline de execução dos efeitos (plugins)
-* Gravação continua do audio
+* Gravação continua do audio (O.K.)
 * Pipeline para gravação -> processamento -> reprodução -> gravar arquivo tmp
 
 ```
